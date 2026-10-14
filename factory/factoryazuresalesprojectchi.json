@@ -1,0 +1,15 @@
+{
+	"name": "factoryazuresalesprojectchi",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "f82d1304-2d55-45f9-beb6-37e25fb697e7",
+		"tenantId": "325ceab2-7b4c-402b-ba21-341200a33a90"
+	}
+}
