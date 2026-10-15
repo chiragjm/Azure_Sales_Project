@@ -234,7 +234,7 @@
 									"parameters": {
 										"container": "bronze",
 										"folder": {
-											"value": "@concat(item().schema,'_cdc')",
+											"value": "@concat(item().table,'_cdc')",
 											"type": "Expression"
 										},
 										"file": "empty.json"
@@ -248,7 +248,7 @@
 									"parameters": {
 										"container": "bronze",
 										"folder": {
-											"value": "@concat(item().schema,'_cdc')",
+											"value": "@concat(item().table,'_cdc')",
 											"type": "Expression"
 										},
 										"file": "cdc.json"
