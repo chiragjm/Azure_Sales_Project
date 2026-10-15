@@ -251,6 +251,33 @@
 				}
 			}
 		],
+		"parameters": {
+			"loop_input": {
+				"type": "string",
+				"defaultValue": [
+					{
+						"schema": "dbo",
+						"table": "Customers",
+						"cdc_col": "updated_at"
+					},
+					{
+						"schema": "dbo",
+						"table": "Products",
+						"cdc_col": "updated_at"
+					},
+					{
+						"schema": "dbo",
+						"table": "SalesOrderDetails",
+						"cdc_col": "updated_at"
+					},
+					{
+						"schema": "dbo",
+						"table": "SalesOrders",
+						"cdc_col": "updated_at"
+					}
+				]
+			}
+		},
 		"variables": {
 			"current": {
 				"type": "String"
