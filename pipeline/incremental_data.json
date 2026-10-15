@@ -8,6 +8,11 @@
 				"dependsOn": [],
 				"userProperties": [],
 				"typeProperties": {
+					"items": {
+						"value": "@pipeline().parameters.loop_input",
+						"type": "Expression"
+					},
+					"isSequential": true,
 					"activities": [
 						{
 							"name": "AzureSQltoLake",
@@ -116,7 +121,10 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"container": "bronze",
-										"folder": "cdc",
+										"folder": {
+											"value": "@concat(item().table,'_cdc')",
+											"type": "Expression"
+										},
 										"file": "cdc.json"
 									}
 								},
@@ -262,7 +270,7 @@
 		],
 		"parameters": {
 			"loop_input": {
-				"type": "string",
+				"type": "array",
 				"defaultValue": [
 					{
 						"schema": "dbo",
